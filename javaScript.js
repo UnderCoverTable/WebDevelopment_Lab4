@@ -2,7 +2,7 @@
 function task1(){
     var array1 = [1,2,3,4];
     var sum = 0;
-    for(let i = 0;i <= array1.length;i++){
+    for(let i = 0;i < array1.length;i++){
         sum += array1[i] ;
     }
 
@@ -60,7 +60,15 @@ function validateForm(){
     var inpEmail = document.getElementById("email").value;    
     var inpPass = document.getElementById("pass").value;
 
-    if(inpEmail == "" || inpName == "" || inpPass == ""){
+    if(inpEmail == "" || inpEmail.length < 8){
+        document.getElementById("email").style.backgroundColor = "red";
+    }
+    if(inpName == "" || inpName.length < 8){
+        document.getElementById("name").style.backgroundColor = "red";
+    }
+    if(inpPass == "" || inpPass.length < 8){
+        document.getElementById("pass").style.backgroundColor = "red";
+   
     }
 
 
