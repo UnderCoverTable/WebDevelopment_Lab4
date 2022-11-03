@@ -60,19 +60,29 @@ function validateForm(){
     var inpEmail = document.getElementById("email").value;    
     var inpPass = document.getElementById("pass").value;
 
-    if(inpEmail == "" || inpEmail.length < 8){
-        document.getElementById("email").style.backgroundColor = "red";
+    if(inpEmail == ""){
+        document.getElementById("email").style.backgroundColor = "salmon";
+        document.getElementById("email").style.borderBlockColor = "red";
+        window.alert("Email was Empty");
+
     }
-    if(inpName == "" || inpName.length < 8){
-        document.getElementById("name").style.backgroundColor = "red";
+    if(inpName == ""){
+        document.getElementById("name").style.backgroundColor = "salmon";
+        document.getElementById("email").style.borderBlockColor = "red";
+        window.alert("Name was Empty");
+
     }
     if(inpPass == "" || inpPass.length < 8){
-        document.getElementById("pass").style.backgroundColor = "red";
-   
-    }
+        document.getElementById("pass").style.backgroundColor = "salmon";
+        document.getElementById("pass").style.borderBlockColor = "red";
+        if(inpPass.length < 8){
+            window.alert("Password was less then 8 characters");
 
+        }
+        else{
+            window.alert("Password was Empty");
+        }
 
-    if(inpEmail.length <= 8|| inpName.length <= 8 || inpPass.length <= 8){
 
     }
 
