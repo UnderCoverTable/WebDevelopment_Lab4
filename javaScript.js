@@ -1,4 +1,4 @@
-
+// prints array and its sum
 function task1(){
     var array1 = [1,2,3,4];
     var sum = 0;
@@ -12,34 +12,34 @@ function task1(){
 
 }
 
-
+// 4 seperate functions for each operation
 
 function add(){
     var n1 = Number(document.getElementById("Num1").value);
     var n2 = Number(document.getElementById("Num2").value);
 
-    document.getElementById("demo").innerHTML = n1+n2;
+    document.getElementById("operation-result").innerHTML = n1+n2;
 }
 
 function subtract(n1,n2){
     var n1 = Number(document.getElementById("Num1").value);
     var n2 = Number(document.getElementById("Num2").value);
 
-    document.getElementById("demo").innerHTML = n1-n2;}
+    document.getElementById("operation-result").innerHTML = n1-n2;}
 
 function multiply(n1,n2){
     var n1 = Number(document.getElementById("Num1").value);
     var n2 = Number(document.getElementById("Num2").value);
 
-    document.getElementById("demo").innerHTML = n1*n2;}
+    document.getElementById("operation-result").innerHTML = n1*n2;}
 
 function divide(n1,n2){
     var n1 = Number(document.getElementById("Num1").value);
     var n2 = Number(document.getElementById("Num2").value);
 
-    document.getElementById("demo").innerHTML = n1/n2;}
+    document.getElementById("operation-result").innerHTML = n1/n2;}
 
-
+// Takes the array input from html. sorts it and prints
 function sortArray(){
 
     var ar = document.getElementById("arrayInput").value;
@@ -48,11 +48,13 @@ function sortArray(){
 
     intArray = ar.split(",");
     intArray.sort();
-    document.getElementById("demo1").innerHTML = intArray;
+    document.getElementById("arSort").innerHTML = intArray;
 
 
 
 }
+
+// validates inputs. changes the fields to appropriate color from the input
 
 function validateForm(){
 
@@ -87,6 +89,8 @@ function validateForm(){
     }
 
 }
+
+// Calculates tip from the input bill and number of people
 
 function tipCalc(){
 
